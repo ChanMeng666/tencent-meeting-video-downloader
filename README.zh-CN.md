@@ -1,5 +1,7 @@
 # 腾讯会议录制下载器
 
+[English README](./README.md)
+
 一个帮助你轻松下载腾讯会议录制视频的 Chrome 浏览器扩展程序。
 
 ## 功能特点
@@ -94,5 +96,3 @@ MIT License
 ## 联系方式
 
 如有问题或建议，请提交 Issue。
-
-[English README](./README.md)

@@ -1,5 +1,7 @@
 # Tencent Meeting Recording Downloader
 
+[中文文档](./README.zh-CN.md)
+
 A Chrome browser extension that helps you easily download Tencent Meeting recording videos.
 
 ## Features
@@ -94,5 +96,3 @@ MIT License
 ## Contact
 
 For issues or suggestions, please submit an Issue.
-
-[中文文档](./README.zh-CN.md)
