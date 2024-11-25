@@ -96,3 +96,11 @@ MIT License
 ## 联系方式
 
 如有问题或建议，请提交 Issue。
+
+## 作者
+
+**Chan Meng**
+
+- LinkedIn: [chanmeng666](https://www.linkedin.com/in/chanmeng666/)
+- GitHub: [ChanMeng666](https://github.com/ChanMeng666)
+
