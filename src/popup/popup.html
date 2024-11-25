@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>腾讯会议录屏下载助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>腾讯会议录屏下载助手</h2>
+    <div id="status" class="status">等待检测视频...</div>
+    <div id="videoList" class="video-list"></div>
+    <div class="input-group">
+      <label for="savePath">保存路径：</label>
+      <input type="text" id="savePath" placeholder="例如：D:/meeting_video.mp4" />
+    </div>
+    <button id="generateBtn" class="generate-btn" disabled>生成下载命令</button>
+    <div id="commandBox" class="command-box" style="display: none;">
+      <div class="command-header">
+        <span>下载命令（请复制到Git Bash中运行）：</span>
+        <button id="copyBtn" class="copy-btn">复制命令</button>
+      </div>
+      <pre id="curlCommand" class="curl-command"></pre>
+      <div class="tips">
+        <p>使用说明：</p>
+        <ol>
+          <li>输入视频保存路径（包含文件名）</li>
+          <li>点击"生成下载命令"</li>
+          <li>复制生成的命令</li>
+          <li>打开Git Bash</li>
+          <li>粘贴命令并回车执行</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
