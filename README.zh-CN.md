@@ -12,23 +12,92 @@
 - 💻 清爽直观的用户界面
 - 🔒 安全可靠，不收集用户数据
 
-## 安装方法
+## 安装指南
 
-1. 下载本项目的最新发布版本
-2. 打开 Chrome 浏览器，进入扩展程序页面（`chrome://extensions/`）
-3. 在右上角启用"开发者模式"
-4. 点击"加载已解压的扩展程序"
-5. 选择已解压的插件文件夹
+### 方法一：直接安装（推荐普通用户使用）
 
-## 使用说明
+1. 下载最新版本
+   - 访问[发布页面](https://github.com/ChanMeng666/tencent-meeting-video-downloader/releases)
+   - 下载最新的 `tencent-meeting-video-downloader.zip` 文件
 
-1. 打开腾讯会议录制回放页面
-2. 点击工具栏中的插件图标
-3. 等待插件检测视频链接
-4. 输入期望的视频保存路径（包括文件名，例如：`D:/meeting_video.mp4`）
-5. 点击"生成下载命令"
-6. 复制生成的 curl 命令
-7. 在 Git Bash 中执行该命令开始下载
+2. 准备 Chrome 浏览器
+   - 打开 Chrome 浏览器
+   - 在地址栏输入 `chrome://extensions/` 并回车
+   - 点击右上角的开关启用"开发者模式"
+
+3. 安装扩展程序
+   - 解压下载的 `tencent-meeting-video-downloader.zip` 文件
+   - 点击 Chrome 扩展页面中的"加载已解压的扩展程序"按钮
+   - 选择解压后的文件夹
+   - 现在你应该能够在 Chrome 工具栏看到拓展程序图标了
+
+### 方法二：从源码安装（面向开发者）
+
+1. 准备工作
+   - 安装 [Node.js](https://nodejs.org/)（14版本或更高）
+   - 安装 [Git](https://git-scm.com/downloads)
+   - 安装 [Git Bash](https://git-scm.com/downloads)（Windows版Git自带）
+
+2. 克隆和构建
+   ```bash
+   # 克隆仓库
+   git clone https://github.com/ChanMeng666/tencent-meeting-video-downloader.git
+   
+   # 进入项目目录
+   cd tencent-meeting-video-downloader
+   
+   # 安装依赖
+   npm install
+   
+   # 构建扩展程序
+   npm run build
+   ```
+
+3. 加载扩展程序
+   - 打开 Chrome，访问 `chrome://extensions/`
+   - 启用"开发者模式"
+   - 点击"加载已解压的扩展程序"
+   - 选择项目目录中的 `dist` 文件夹
+
+## 使用指南
+
+1. 准备会议录制视频
+   - 在 Chrome 中打开腾讯会议录制回放页面
+   - 开始播放要下载的视频
+
+2. 使用扩展程序
+   - 点击 Chrome 工具栏中的扩展程序图标
+   - 等待出现"检测到视频"的提示
+   - 输入你想要保存的路径（例如：`D:/Videos/meeting_recording.mp4`）
+   - 点击"生成下载命令"
+
+3. 下载视频
+   - 点击"复制命令"按钮
+   - 打开 Git Bash
+   - 右键选择"粘贴"以粘贴命令
+   - 按回车键开始下载
+   - 等待下载完成
+
+4. 验证下载
+   - 检查指定的保存位置
+   - 尝试播放下载的视频以确保正常工作
+
+## 常见问题解决
+
+常见问题及解决方案：
+
+1. 扩展程序无法检测到视频
+   - 确保视频正在播放
+   - 刷新页面重试
+
+2. 下载命令不工作
+   - 验证 Git Bash 是否正确安装
+   - 检查保存路径是否有效
+   - 确保你有保存位置的写入权限
+
+3. 视频播放问题
+   - 尝试使用 VLC 播放器
+   - 检查下载是否完整完成
 
 ## 开发指南
 
@@ -41,7 +110,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/tencent-meeting-video-downloader.git
+git clone https://github.com/ChanMeng666/tencent-meeting-video-downloader.git
 
 # 安装依赖
 npm install

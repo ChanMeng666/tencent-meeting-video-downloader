@@ -12,23 +12,92 @@ A Chrome browser extension that helps you easily download Tencent Meeting record
 - 💻 Clean and intuitive user interface
 - 🔒 Secure and reliable, no user data collection
 
-## Installation
+## Installation Guide
 
-1. Download the latest release of this project
-2. Open Chrome browser, go to extensions page (`chrome://extensions/`)
-3. Enable "Developer mode" in the top right corner
-4. Click "Load unpacked extension"
-5. Select the unzipped plugin folder
+### Method 1: Direct Installation (Recommended for regular users)
 
-## Usage
+1. Download the latest release
+   - Go to the [Releases](https://github.com/ChanMeng666/tencent-meeting-video-downloader/releases) page
+   - Download the latest `tencent-meeting-video-downloader.zip` file
 
-1. Open the Tencent Meeting recording playback page
-2. Click the plugin icon in the toolbar
-3. Wait for the plugin to detect the video URL
-4. Enter the desired video save path (including filename, e.g., `D:/meeting_video.mp4`)
-5. Click "Generate Download Command"
-6. Copy the generated curl command
-7. Execute the command in Git Bash to start downloading
+2. Prepare Chrome Browser
+   - Open Chrome browser
+   - Type `chrome://extensions/` in the address bar and press Enter
+   - Enable "Developer mode" using the toggle switch in the top-right corner
+
+3. Install the Extension
+   - Unzip the downloaded `tencent-meeting-video-downloader.zip` file
+   - Click "Load unpacked" button in Chrome extensions page
+   - Select the unzipped folder
+   - You should now see the extension icon in your Chrome toolbar
+
+### Method 2: Installation from Source (For developers)
+
+1. Prerequisites
+   - Install [Node.js](https://nodejs.org/) (version 14 or higher)
+   - Install [Git](https://git-scm.com/downloads)
+   - Install [Git Bash](https://git-scm.com/downloads) (comes with Git for Windows)
+
+2. Clone and Build
+   ```bash
+   # Clone the repository
+   git clone https://github.com/ChanMeng666/tencent-meeting-video-downloader.git
+   
+   # Enter the project directory
+   cd tencent-meeting-video-downloader
+   
+   # Install dependencies
+   npm install
+   
+   # Build the extension
+   npm run build
+   ```
+
+3. Load the Extension
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `dist` folder from the project directory
+
+## Usage Guide
+
+1. Prepare the Meeting Recording
+   - Open the Tencent Meeting recording playback page in Chrome
+   - Start playing the video you want to download
+
+2. Use the Extension
+   - Click the extension icon in the Chrome toolbar
+   - Wait for the "Video detected" message
+   - Enter your desired save path (e.g., `D:/Videos/meeting_recording.mp4`)
+   - Click "Generate Download Command"
+
+3. Download the Video
+   - Click the "Copy Command" button
+   - Open Git Bash
+   - Right-click and select "Paste" to paste the command
+   - Press Enter to start downloading
+   - Wait for the download to complete
+
+4. Verify the Download
+   - Check the specified save location
+   - Try playing the downloaded video to ensure it works correctly
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. Extension not detecting video
+   - Make sure the video is playing
+   - Refresh the page and try again
+
+2. Download command not working
+   - Verify Git Bash is installed correctly
+   - Check if the save path is valid
+   - Ensure you have write permissions for the save location
+
+3. Video playback issues
+   - Try using VLC media player
+   - Check if the download completed successfully
 
 ## Development
 
@@ -41,7 +110,7 @@ A Chrome browser extension that helps you easily download Tencent Meeting record
 
 ```bash
 # Clone project
-git clone https://github.com/your-username/tencent-meeting-video-downloader.git
+git clone https://github.com/ChanMeng666/tencent-meeting-video-downloader.git
 
 # Install dependencies
 npm install
