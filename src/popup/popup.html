@@ -16,11 +16,6 @@
     </div>
     <button id="generateBtn" class="generate-btn" disabled>生成下载命令</button>
     <div id="commandBox" class="command-box" style="display: none;">
-      <div class="command-header">
-        <span>下载命令（请复制到Git Bash中运行）：</span>
-        <button id="copyBtn" class="copy-btn">复制命令</button>
-      </div>
-      <pre id="curlCommand" class="curl-command"></pre>
       <div class="tips">
         <p>使用说明：</p>
         <ol>
@@ -31,6 +26,11 @@
           <li>鼠标右键粘贴命令并回车执行</li>
         </ol>
       </div>
+      <div class="command-header">
+        <span>下载命令（请复制到Git Bash中运行）：</span>
+        <button id="copyBtn" class="copy-btn">复制命令</button>
+      </div>
+      <pre id="curlCommand" class="curl-command"></pre>
     </div>
   </div>
 </body>
