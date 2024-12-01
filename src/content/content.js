@@ -1,4 +1,4 @@
-// 注入网络请求监听器
+// 注入检测脚本
 const script = document.createElement('script');
 script.textContent = `
   const originalFetch = window.fetch;
@@ -27,20 +27,3 @@ window.addEventListener('message', (event) => {
     });
   }
 });
-
-// 监听XHR请求
-const observer = new PerformanceObserver((list) => {
-  const entries = list.getEntries();
-  entries.forEach(entry => {
-    if (entry.name.includes('myqcloud.com') && 
-        entry.name.includes('.mp4') && 
-        entry.name.includes('recording')) {
-      chrome.runtime.sendMessage({
-        action: 'foundVideoUrl',
-        url: entry.name
-      });
-    }
-  });
-});
-
-observer.observe({ entryTypes: ['resource'] });

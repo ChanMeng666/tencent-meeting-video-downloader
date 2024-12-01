@@ -5,21 +5,19 @@
   "description": "一键下载腾讯会议录屏视频",
   "permissions": [
     "webRequest",
-    "downloads",
-    "storage",
-    "tabs",
-    "webRequestBlocking"
+    "webRequestBlocking",
+    "storage"
   ],
   "host_permissions": [
     "*://*.qq.com/*",
-    "*://*.tencent.com/*",
+    "*://*.tencent.com/*", 
     "*://*.myqcloud.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
+      "48": "icons/icon48.png", 
       "128": "icons/icon128.png"
     }
   },
@@ -30,7 +28,7 @@
     {
       "matches": [
         "*://*.meeting.tencent.com/*",
-        "*://*.myqcloud.com/*"
+        "*://*.myqcloud.com/*"  
       ],
       "js": ["content.js"]
     }
@@ -40,4 +38,4 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   }
-} 
+}

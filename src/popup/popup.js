@@ -65,4 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
       updateStatus('未检测到视频，请打开腾讯会议录屏页面并播放视频');
     }
   });
-}); 
+});

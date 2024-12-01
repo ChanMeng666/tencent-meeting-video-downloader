@@ -5,10 +5,8 @@
   "description": "一键下载腾讯会议录屏视频",
   "permissions": [
     "webRequest",
-    "downloads",
-    "storage",
-    "tabs",
-    "webRequestBlocking"
+    "webRequestBlocking",
+    "storage"
   ],
   "host_permissions": [
     "*://*.qq.com/*",
