@@ -1,174 +1,127 @@
-# Tencent Meeting Recording Downloader
+<div align="center">
+ <h1> <img src="/icons/icon128.png" width="80px"><br/>Tencent Meeting Recording Downloader</h1>
+ <img src="https://img.shields.io/github/license/ChanMeng666/tencent-meeting-video-downloader"/>
+ <img src="https://img.shields.io/github/v/release/ChanMeng666/tencent-meeting-video-downloader"/>
+ <img src="https://img.shields.io/chrome-web-store/rating/tencent-meeting-video-downloader"/>
+ <img src="https://img.shields.io/github/stars/ChanMeng666/tencent-meeting-video-downloader"/>
+</div>
+<br/>
 
-[中文文档](./README.zh-CN.md)
+A Chrome browser extension that helps you easily download Tencent Meeting recording videos with just a few clicks. No more complicated steps - just install, detect, and download!
 
-A Chrome browser extension that helps you easily download Tencent Meeting recording videos.
+# ✨ Features
 
-## Features
+- 🎯 **Auto Detection** - Automatically detect video URLs on Tencent Meeting playback pages
+- 📂 **Custom Save Path** - Choose your preferred location to save downloaded videos
+- 🚀 **Reliable Downloads** - Generate optimized curl download commands
+- 💻 **Clean Interface** - Simple and intuitive user experience
+- 🔒 **Privacy First** - No data collection, completely secure and private
 
-- 🎯 Automatically detect video URLs on Tencent Meeting playback pages
-- 📂 Support custom video save paths
-- 🚀 Generate reliable curl download commands
-- 💻 Clean and intuitive user interface
-- 🔒 Secure and reliable, no user data collection
+# 📥 Installation
 
-## Installation Guide
+### Method 1: Direct Installation (Recommended)
 
-### Method 1: Direct Installation (Recommended for regular users)
-
-1. Download the latest release
-   - Go to the [Releases](https://github.com/ChanMeng666/tencent-meeting-video-downloader/releases) page
-   - Download the latest `tencent-meeting-video-downloader.zip` file
+1. Download latest release
+   - Visit [Releases](https://github.com/ChanMeng666/tencent-meeting-video-downloader/releases) 
+   - Download `tencent-meeting-video-downloader.zip`
 
 2. Prepare Chrome Browser
-   - Open Chrome browser
-   - Type `chrome://extensions/` in the address bar and press Enter
-   - Enable "Developer mode" using the toggle switch in the top-right corner
+   - Open Chrome
+   - Enter `chrome://extensions/` in address bar
+   - Enable "Developer mode" in top-right corner
 
-3. Install the Extension
-   - Unzip the downloaded `tencent-meeting-video-downloader.zip` file
-   - Click "Load unpacked" button in Chrome extensions page
-   - Select the unzipped folder
-   - You should now see the extension icon in your Chrome toolbar
-
-### Method 2: Installation from Source (For developers)
-
-1. Prerequisites
-   - Install [Node.js](https://nodejs.org/) (version 14 or higher)
-   - Install [Git](https://git-scm.com/downloads)
-   - Install [Git Bash](https://git-scm.com/downloads) (comes with Git for Windows)
-
-2. Clone and Build
-   ```bash
-   # Clone the repository
-   git clone https://github.com/ChanMeng666/tencent-meeting-video-downloader.git
-   
-   # Enter the project directory
-   cd tencent-meeting-video-downloader
-   
-   # Install dependencies
-   npm install
-   
-   # Build the extension
-   npm run build
-   ```
-
-3. Load the Extension
-   - Open Chrome and go to `chrome://extensions/`
-   - Enable "Developer mode"
+3. Install Extension
+   - Unzip downloaded file
    - Click "Load unpacked"
-   - Select the `dist` folder from the project directory
+   - Select unzipped folder
+   - Extension icon appears in toolbar
 
-## Usage Guide
-
-1. Prepare the Meeting Recording
-   - Open the Tencent Meeting recording playback page in Chrome
-   - Start playing the video you want to download
-
-2. Use the Extension
-   - Click the extension icon in the Chrome toolbar
-   - Wait for the "Video detected" message
-   - Enter your desired save path (e.g., `D:/Videos/meeting_recording.mp4`)
-   - Click "Generate Download Command"
-
-3. Download the Video
-   - Click the "Copy Command" button
-   - Open Git Bash
-   - Right-click and select "Paste" to paste the command
-   - Press Enter to start downloading
-   - Wait for the download to complete
-
-4. Verify the Download
-   - Check the specified save location
-   - Try playing the downloaded video to ensure it works correctly
-
-## Troubleshooting
-
-Common issues and solutions:
-
-1. Extension not detecting video
-   - Make sure the video is playing
-   - Refresh the page and try again
-
-2. Download command not working
-   - Verify Git Bash is installed correctly
-   - Check if the save path is valid
-   - Ensure you have write permissions for the save location
-
-3. Video playback issues
-   - Try using VLC media player
-   - Check if the download completed successfully
-
-## Development
-
-### Requirements
-
-- Node.js >= 14
-- Git Bash (for executing download commands)
-
-### Project Setup
+### Method 2: Build from Source
 
 ```bash
-# Clone project
+# Clone repository 
 git clone https://github.com/ChanMeng666/tencent-meeting-video-downloader.git
 
 # Install dependencies
+cd tencent-meeting-video-downloader
 npm install
 
-# Development build
+# Build extension
+npm run build
+```
+
+Then load the `dist` folder as unpacked extension.
+
+# 🎮 Usage Guide
+
+1. **Open Recording** 
+   - Navigate to Tencent Meeting recording page
+   - Start playing the video
+
+2. **Generate Command**
+   - Click extension icon
+   - Wait for "Video detected"
+   - Enter save path
+   - Click "Generate Download Command"
+
+3. **Download**
+   - Copy generated command
+   - Open Git Bash
+   - Paste and run command
+   - Wait for download to complete
+
+# 🛠️ Development
+
+### Prerequisites
+- Node.js >= 14
+- Git Bash
+
+### Project Structure
+```
+├── src/
+│   ├── assets/    # Icons & resources
+│   ├── background/# Background scripts
+│   ├── content/   # Content scripts
+│   ├── popup/     # Popup UI
+│   └── utils/     # Utilities
+├── dist/          # Build output
+├── manifest.json  # Extension config
+└── webpack.config.js
+```
+
+### Scripts
+```bash
+# Development
 npm run watch
 
 # Production build
 npm run build
 ```
 
-### Project Structure
+# 🚀 Tech Stack
 
-```
-├── src/
-│   ├── assets/    # Icons and static resources
-│   ├── background/# Background scripts
-│   ├── content/   # Content scripts
-│   ├── popup/     # Popup window related files
-│   └── utils/     # Utility functions
-├── dist/          # Build output directory
-├── manifest.json  # Extension configuration file
-├── webpack.config.js # Webpack configuration
-└── package.json   # Project configuration file
-```
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Chrome](https://img.shields.io/badge/chrome-%234285F4.svg?style=for-the-badge&logo=google-chrome&logoColor=white)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-## Notes
+# ⚖️ License
 
-- This plugin is for learning and personal use only
-- Please comply with relevant terms of service and regulations
-- Downloaded videos are for personal viewing only, do not distribute
+[Apache-2.0 license](LICENSE)
 
-## Tech Stack
+# 🤝 Contributing
 
-- JavaScript (ES6+)
-- Chrome Extension API
-- Webpack
-- CSS3
+1. Fork repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
 
-## License
-
-MIT License
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Contact
-
-For issues or suggestions, please submit an Issue.
-
-## Author
+# 📞 Contact
 
 **Chan Meng**
 
-- LinkedIn: [chanmeng666](https://www.linkedin.com/in/chanmeng666/)
-- GitHub: [ChanMeng666](https://github.com/ChanMeng666)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=normal&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=normal&logo=github&logoColor=white)](https://github.com/ChanMeng666)
+
+For issues and suggestions, please submit an Issue.
