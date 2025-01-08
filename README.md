@@ -9,6 +9,11 @@
 
 A Chrome browser extension that helps you easily download Tencent Meeting recording videos with just a few clicks. No more complicated steps - just install, detect, and download!
 
+<br/>
+
+[![Explore GitHub Profile README Generator](https://gradient-svg-generator.vercel.app/?text=👉+Try+It+Now!+👈&height=40&template=pride-rainbow)](https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar)
+
+<br/>
 
 https://github.com/user-attachments/assets/31666ea2-6f05-47f2-a7af-383a6fdb6f1d
 
