@@ -18,6 +18,10 @@ A Chrome browser extension that helps you easily download Tencent Meeting record
 https://github.com/user-attachments/assets/31666ea2-6f05-47f2-a7af-383a6fdb6f1d
 
 
+https://github.com/user-attachments/assets/2834ab2e-fb79-4df5-b662-b236d57ba89c
+
+
+
 ![屏幕截图 2024-12-02 104051](https://github.com/user-attachments/assets/ccc3775f-b395-4bdd-a474-7d286086d012)
 
 ![屏幕截图 2024-12-08 194355](https://github.com/user-attachments/assets/22949259-5d14-4270-9d31-0f290e8fbc81)
