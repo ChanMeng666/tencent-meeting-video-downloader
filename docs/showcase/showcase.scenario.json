@@ -1,0 +1,57 @@
+{
+  "project": "tencent-meeting-video-downloader",
+  "baseUrl": "https://chromewebstore.google.com",
+  "outDir": "docs/showcase",
+
+  "viewports": {
+    "desktop": { "width": 1280, "height": 900, "deviceScaleFactor": 2 }
+  },
+
+  "reducedMotion": "reduce",
+
+  "pages": [
+    {
+      "label": "store-hero",
+      "url": "/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc",
+      "viewport": "desktop",
+      "fullPage": false,
+      "before": [
+        { "action": "wait", "ms": 2500 },
+        { "action": "click", "selector": "button:has-text('不了，谢谢')", "optional": true, "timeoutMs": 4000 },
+        { "action": "wait", "ms": 800 }
+      ]
+    },
+    {
+      "label": "store-description",
+      "url": "/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc",
+      "viewport": "desktop",
+      "fullPage": false,
+      "before": [
+        { "action": "wait", "ms": 2500 },
+        { "action": "click", "selector": "button:has-text('不了，谢谢')", "optional": true, "timeoutMs": 4000 },
+        { "action": "wait", "ms": 600 },
+        { "action": "scroll", "by": 600 },
+        { "action": "wait", "ms": 800 }
+      ]
+    }
+  ],
+
+  "demo": {
+    "size": { "width": 1280, "height": 720 },
+    "stepPauseMs": 700,
+    "steps": [
+      { "action": "goto", "url": "/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc", "timeoutMs": 20000 },
+      { "action": "wait", "ms": 2500 },
+      { "action": "click", "selector": "button:has-text('不了，谢谢')", "optional": true, "timeoutMs": 4000 },
+      { "action": "wait", "ms": 800 },
+      { "action": "scroll", "by": 300 },
+      { "action": "wait", "ms": 800 },
+      { "action": "scroll", "by": 400 },
+      { "action": "wait", "ms": 1000 },
+      { "action": "scroll", "by": 400 },
+      { "action": "wait", "ms": 800 },
+      { "action": "scroll", "by": -1100 },
+      { "action": "wait", "ms": 1000 }
+    ]
+  }
+}
